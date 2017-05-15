@@ -8,7 +8,7 @@ public class TestListQuestType {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-		int type=ListQuestType.displayQType();
+		int type=ListQuestType.ReturnQType();
 		System.out.println("\n The selected Question Type :"+type);
 						
 				

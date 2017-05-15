@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class ListQuestType {
 
-	public static int displayQType() throws ClassNotFoundException, SQLException {
+	public static void ReturnQType() throws ClassNotFoundException, SQLException {
 
 		Connection con = ConnectionUtil.connectDB();
 
@@ -30,11 +30,7 @@ public class ListQuestType {
 
 		con.close();
 
-		Scanner s = new Scanner(System.in);
-		System.out.println("\nEnter the Question Type: ");
-		int type = s.nextInt();
-		s.nextLine();
-		s.close();
-		return type;
+		
+		//return type;
 	}
 }

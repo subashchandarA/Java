@@ -7,11 +7,13 @@ public class TestAddQuest_AddAnswer {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-		int type = 4;
 		Scanner s = new Scanner(System.in);
+		System.out.println("\nEnter the Question Type(1): ");
+		int type = s.nextInt();
+		s.nextLine();
 
-		switch (type) {
-		case 4: {
+		if(type==1)
+		{
 			System.out.println("\nEnter the Question : ");
 			String ques = s.nextLine();
 			System.out.println("\nEnter the Answer :");
@@ -19,6 +21,7 @@ public class TestAddQuest_AddAnswer {
 
 			System.out.println("\nEnter the Score :");
 			int score = s.nextInt();
+			s.nextLine();
 			int qid = AddQuest.insert(ques, type, score);
 			System.out.println("\nQuest id:" + qid);
 
@@ -28,24 +31,13 @@ public class TestAddQuest_AddAnswer {
 			int row = AddCorrectAnswerOption.insert(qid, ansid);
 			System.out.println("\n  correct answer option for qid=" + qid + " inserted ");
 
-			break;
-
 		}
-		case 5: {
-
-			System.out.println("\nEnter the Question: ");
-			String ques = s.next();
-			System.out.println("\nEnter the Score :");
-			int score = s.nextInt();
-			int qid = AddQuest.insert(ques, 2, score);
-			System.out.println("\nQest id:" + qid);
-
-			System.out.println("\nEnter the Answer Option 1: :");
-			String answ1 = s.next();
-			break;
+		else
+		{
+			System.out.println("\n Enter the correct type: ");
 		}
 
-		}
+
 		s.close();
 	}
 }

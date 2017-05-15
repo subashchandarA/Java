@@ -1,0 +1,14 @@
+
+ CREATE TABLE question
+ (
+ id INT UNSIGNED  AUTO_INCREMENT PRIMARY KEY,
+ q_text VARCHAR(500) NOT NULL,
+ q_typeID INT UNSIGNED NOT NULL,
+ q_score INT UNSIGNED  NOT NULL DEFAULT 1,
+  FOREIGN KEY (q_typeID) REFERENCES seed_ques_type(id),
+UNIQUE (q_text) 
+ )
+ 
+
+ 
+ 
